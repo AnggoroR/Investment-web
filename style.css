@@ -1,0 +1,756 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive&family=Goblin+One&display=swap');
+
+:root {
+    --primary: rgb(100, 44, 29);
+    --bg: rgba(196, 169, 147, 0.8);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    
+}
+
+body {
+    /* min-height: 2000px; */
+    font-family: 'Cutive', serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+}
+
+/* Bagian Navbar */
+
+.navbar-container {
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+    background-color: var(--bg);
+    border-bottom: var(--primary) 1px solid;
+    position: fixed;
+}
+    
+.navbar-container .logo {
+    font-style: italic;
+    color: var(--primary);
+}
+
+.navbar-container .logo span {
+    color: white;
+}
+
+.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+   
+.navbar-container .nav-list li {
+    list-style-type: none;
+}
+   
+.navbar-container .nav-list li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: .9rem;
+    color: var(--primary);
+    padding-left: 1rem;
+}
+
+/* Dropdown Content (disembunyikan secara default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin: 0;
+    background-color: var(--bg);
+    min-width: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+/* Links di dalam dropdownnya */
+.dropdown-content a {
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--primary);
+}
+  
+/* Tampilkan menu dropdown */
+.show {
+    display: block;
+}
+   
+.navbar-container .nav-list li:hover a {
+    color: white;
+}
+
+.navbar-container .nav-list li a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.2rem;
+    border-bottom: var(--primary) 0.1rem solid;
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+
+.navbar-container .nav-list li a:hover::after {
+    transform: scaleX(0.5);
+}
+
+/* Bagian Beranda */
+
+.hero {
+    min-height: 100vh;
+    background: url(img/invest-bg.jpg)no-repeat center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(216, 162, 128, 1) 3%, rgba(216, 162, 128, 0) 70%);
+}
+
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 4rem 7%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+main .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+   
+main .content .content-description {
+    flex: 1 1;
+    max-width: 27rem;
+    flex-wrap: wrap;
+}
+   
+main .content .content-description .title {
+    font-size: 2rem;
+    margin-block: 1rem;
+    color: var(--primary);
+}
+   
+main .content .content-description p {
+    line-height: 1.7rem;
+    font-size: 1rem;
+    text-align: justify;
+}
+   
+main .content .content-description button {
+    padding: .8rem 2.5rem;
+    margin-block-start: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Cutive', serif;
+    color: white;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-color: var(--primary);
+    cursor: pointer;
+    transition: all .15s ease-in;
+}
+   
+main .content .content-description button:hover {
+    border: 3px solid var(--primary);
+    color: var(--primary);
+    background-color: transparent;
+}
+
+/* Bagian Question */
+
+.question {
+    padding-top: 4rem;
+    position: relative;
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+}
+
+.question::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    background: linear-gradient(to bottom, rgba(216, 162, 128, 1) 2%, rgba(216, 162, 128, 0) 70%);
+}
+
+.question .one {
+    display: flex;
+    padding: 5rem 7%;
+}
+
+.question .one .question-description {
+    padding: 0 4rem;
+}
+
+.question .one .question-description p {
+    text-align: justify;
+}
+
+.question .one .question-img img{
+    max-width: 500px;
+}
+
+.question .two {
+    display: flex;
+    padding: 5rem 7%;
+}
+
+.question .two .question-img img {
+    max-width: 500px;
+}
+
+.question .two .question-description {
+    padding: 0 4rem;
+}
+
+.question .two .question-description p {
+    text-align: justify;
+}
+
+.question .three {
+    display: flex;
+    padding: 5rem 7%;
+}
+
+.question .three .question-img img {
+    max-width: 500px;
+}
+
+.question .three .question-description {
+    padding: 0 4rem;
+}
+
+.question .three .question-description p {
+    text-align: justify;
+}
+
+/* Bagian Fitur */
+
+.feature {
+    color: var(--primary);
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature h1 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline brown 5px;
+    margin-bottom: 5rem;
+}
+
+.feature .feature-content {
+    text-align: justify;
+}
+
+.feature .feature-content .one {
+    display: flex;   
+    align-items: center; 
+    padding: 2rem 7%;
+}
+
+.feature .feature-content .one .feature-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+}
+
+.feature .feature-content .one .feature-description {
+    padding: 0 4rem;
+}
+
+.feature .feature-content .one .feature-description h2 {
+    font-size: 1.5rem;
+}
+
+.feature .feature-content .one .feature-description p {
+    color: black;
+}
+
+.feature .feature-content .two {
+    display: flex;   
+    align-items: center; 
+    padding: 2rem 7%;
+}
+
+.feature .feature-content .two .feature-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+}
+
+.feature .feature-content .two .feature-description {
+    padding: 0 4rem;
+}
+
+.feature .feature-content .two .feature-description h2 {
+    font-size: 1.5rem;
+}
+
+.feature .feature-content .two .feature-description p {
+    color: black;
+}
+
+.feature .feature-content .three {
+    display: flex;    
+    align-items: center;
+    padding: 2rem 7%;
+}
+
+.feature .feature-content .three .feature-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+}
+
+.feature .feature-content .three .feature-description {
+    padding: 0 4rem;
+}
+
+.feature .feature-content .three .feature-description h2 {
+    font-size: 1.5rem;
+}
+
+.feature .feature-content .three .feature-description p {
+    color: black;
+}
+
+.feature .feature-content .four {
+    display: flex;    
+    align-items: center;
+    padding: 2rem 7%;
+}
+
+.feature .feature-content .four .feature-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+}
+
+.feature .feature-content .four .feature-description {
+    padding: 0 4rem;
+}
+
+.feature .feature-content .four .feature-description h2 {
+    font-size: 1.5rem;
+}
+
+.feature .feature-content .four .feature-description p {
+    color: black;
+}
+
+/* Bagian Tentang Kami */
+
+.about {
+    padding-top: 6rem;
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+}
+
+.about h1 {
+    text-align: center;
+    color: var(--primary);
+    text-decoration: underline brown 5px;
+    font-size: 1.7rem;
+}
+
+.about .about-content {
+    display: flex;
+    padding: 4rem 7%;
+}
+
+.about h1 span {
+    color: var(--bg);
+    -webkit-text-stroke: black 1px;
+}
+
+.about .about-img {
+    flex: 1 1 80rem;
+}
+
+.about .about-img img {
+    max-width: 90%;
+    border-radius: 70px;
+    box-shadow: 20px 20px 20px var(--primary);
+}
+
+.about .about-description {
+    flex: 1 1 100rem;
+    text-align: justify;
+}
+
+.about .about-description h2 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.contact {
+    padding: 6rem 7%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--primary);
+}
+
+.contact .content {
+    margin-bottom: 4rem;
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 1.7rem;
+    text-decoration: underline brown 5px;
+}
+
+.contact .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .container .contact-info {
+    width: 50%;
+}
+
+.contact .container .contact-info .box {
+    display: flex;
+}
+
+.contact .container .contact-form {
+    width: 40%;
+    background-color: white;
+    padding: 3rem;
+}
+
+.contact .container .contact-info .box .icon {
+    margin: 25px;
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: var(--primary) 1.5px solid;
+    font-size: 22px;
+}
+
+.contact .container .contact-info .box .text p{
+    max-width: 17rem;
+}
+
+.contact .container .contact-form .input-box {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact .container .contact-form .input-box input, .contact .container .contact-form .input-box textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: #333 2px solid;
+    outline: none;
+    resize: none;
+}
+
+.contact .container .contact-form .input-box input[type="submit"] {
+    width: 6rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 15%;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.contact .container .contact-form .input-box input[type="submit"]:hover {
+    color: var(--primary);
+    background-color: transparent;
+}
+
+/* Bagian Biodata */
+
+.profile {
+    padding: 6rem 7%;
+    color: var(--primary);
+}
+
+.profile h1 {
+    text-align: center;
+    margin-bottom: 5rem;
+    text-decoration: underline brown 5px;
+    font-size: 1.7rem;
+}
+
+.profile .profile-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profile .profile-content .profile-description {
+    padding-top: 2%;
+    line-height: 2rem;
+    text-align: left;
+}
+
+.profile .profile-content .profile-description h2{
+    border: var(--primary) 2px solid;
+    border-radius: 4rem;
+    padding: .4rem 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.profile .profile-content .profile-description table {
+    font-size: 1.1rem;
+}
+
+.profile .profile-content .profile-img img {
+    max-width: 500px;
+    border-radius: 50%;
+    background: var(--bg);
+}
+
+/* Bagian Footer */
+
+footer {
+    background: rgba(165, 42, 42, 0.1);
+    text-align: center;
+    padding: 2rem 7%;
+}
+
+footer .socials {
+    padding: 1rem 0;
+}
+
+footer .socials a {
+    padding: 0 1rem;
+    font-size: 2rem;
+}
+
+footer .socials a:hover {
+    background: #ececec;
+    border-radius: 50%;
+}
+
+footer .socials .instagram {
+    color: rgb(110, 39, 125);
+}
+
+footer .socials .twitter {
+    color: #1DA1F2;
+}
+
+footer .socials .facebook {
+    color: 	#4267B2;
+}
+
+footer .links {
+    padding: 1rem 0;
+}
+
+footer .links a {
+    padding: 0 1rem;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+footer .links a:hover {
+    color: white;
+}
+
+/* Bagian Responsif */
+
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: .7rem;
+    }
+
+    main {
+        padding: 1rem 3rem;
+        margin: 14rem 0 9.5rem;
+    }
+
+    main .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main .content .content-description .title {
+        font-size: 3rem;
+    }
+     
+    main .content .content-description p {
+        font-size: 1rem;
+    }
+     
+    main .content .content-image {
+        order: -1;
+    }
+
+    .question {
+        padding-top: 10rem;
+    }
+
+    .question .one {
+        display: block;       
+    }
+
+    .question .one .question-img img {
+        max-width: 100%;
+    }
+
+    .question .two {
+        padding-top: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .question .two .question-img img {
+        max-width: 100%;
+    }
+
+    .question .three {
+        padding-top: 0;
+        display: block;
+    }
+
+    .question .three .question-img img {
+        max-width: 100%;
+    }
+
+    .feature {
+        padding-top: 14rem;
+    }
+
+    .feature .feature-content {
+        max-width: 100%;
+    }
+
+    .feature .feature-content .one {
+        display: block;
+    }
+
+    .feature .feature-content .one .feature-img {
+        text-align: center;
+    }
+
+    .feature .feature-content .two {
+        display: block;
+    }
+
+    .feature .feature-content .two .feature-img {
+        text-align: center;
+    }
+
+    .feature .feature-content .three {
+        display: block;
+    }
+
+    .feature .feature-content .three .feature-img {
+        text-align: center;
+    }
+
+    .feature .feature-content .four {
+        display: block;
+    }
+
+    .feature .feature-content .four .feature-img {
+        text-align: center;
+    }
+
+    .about {
+        padding-top: 14rem;
+    }
+
+    .about .about-content {
+        display: block;
+        max-width: 100%;
+    }
+
+    .about .about-content .about-img {
+        margin-bottom: 5rem;
+    }
+
+    .about .about-content .about-img img {
+        margin-left: 1rem;
+    }
+
+    .contact {
+        padding-top: 14rem;
+    }
+
+    .contact .container {
+        flex-direction: column;
+    }
+
+    .contact .container .contact-info {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .contact .container .contact-form {
+        width: 100%;
+    }
+
+    .profile {
+        padding-top: 14rem;
+    }
+
+    .profile .profile-content {
+        display: block;
+    }
+
+    .profile .profile-content .profile-img img {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Bagian Header dan Navbar -->
+    <header class="navbar-container">
+        <div class="logo">
+          <h1>Invest<span>ment</span></h1>
+        </div>
+        <nav class="nav-list">
+          <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#feature">Fitur</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            <li><a href="#other" onclick="myFunction()" class="dropbtn">Lainnya</a>
+              <div id="myDropdown" class="dropdown-content">
+                <ul>
+                  <li><a href="#question">Pertanyaan</a></li>
+                  <li><a href="#profile">Biodata</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#" id="search"><i data-feather="search"></i></a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <!-- Bagian Beranda -->
+    <section id="home" class="hero">
+      <main>
+        <div class="content">
+          <div class="content-description">
+            <h1 class="title">Giat Investasi dari Sekarang!</h1>
+            <p>Sarana untuk membantu anak muda untuk belajar berinvestasi dan Investment memiliki visi untuk menjadikannya investor hebat yang sukses dan bijaksana.</p>
+            <a href="#question"><button>Lebih Lanjut</button></a>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!-- Bagian Pertanyaan-Pertanyaan -->
+    <article id="question" class="question">
+      <div class="one">
+        <div class="question-img">
+          <img src="img/invest-question.png" alt="Just Ilustration">
+        </div>
+        <div class="question-description">
+          <h2>Apa itu Investasi?</h2>
+          <p>Investasi adalah kegiatan membeli aset dengan harapan mendapatkan keuntungan di masa depan. Tujuan utama dari investasi adalah untuk meningkatkan kekayaan atau mempertahankan daya beli dari uang yang dimiliki.</p>
+        </div>
+      </div>
+      <div class="two">
+        <div class="question-description">
+          <h2>Apa tujuan saya berinvestasi?</h2>
+          <p>Setiap orang memiliki tujuan yang berbeda-beda dalam berinvestasi, beberapa tujuan yang umum diantaranya adalah untuk mempersiapkan dana pensiun, membeli properti atau kendaraan, membayar pendidikan anak, atau untuk meningkatkan kekayaan secara umum.</p>
+        </div>
+        <div class="question-img">
+          <img src="img/invest-question (2).png" alt="Just Ilustration">
+        </div>
+      </div>
+      <div class="three">
+        <div class="question-img">
+          <img src="img/invest-question (3).png" alt="Just Ilustration">
+        </div>
+        <div class="question-description">
+          <h2>Bagaimana cara memulai investasi?</h2>
+          <p>Cara memulai investasi adalah dengan menentukan tujuan investasi, memilih jenis investasi yang sesuai dengan tujuan dan profil risiko, membuka akun investasi, dan memulai menanamkan dana.</p>
+        </div>
+      </div>
+    </article>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#642c1d" fill-opacity="1" d="M0,192L48,181.3C96,171,192,149,288,154.7C384,160,480,192,576,218.7C672,245,768,267,864,261.3C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#642c1d" fill-opacity="1" d="M0,192L48,181.3C96,171,192,149,288,154.7C384,160,480,192,576,218.7C672,245,768,267,864,261.3C960,256,1056,224,1152,218.7C1248,213,1344,235,1392,245.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    
+    <!-- Bagian Fitur -->
+    <article id="feature" class="feature">
+      <h1>Fitur</h1>
+      <div class="feature-content">
+        <div class="one">
+          <div class="feature-img">
+            <img src="img/calendar.jpg" alt="Calendar">
+          </div>
+          <div class="feature-description">
+            <h2>Kegiatan</h2>
+            <p>Mengikuti berbagai kegiatan di Investment yang sudah dijadwalkan dengan baik dan dapatkan pengalaman yang menarik serta bermanfaat.</p>
+          </div>
+        </div>
+        <div class="two">
+          <div class="feature-img">
+           <img src="img/book.jpg" alt="Material Book">
+          </div>
+          <div class="feature-description">
+            <h2>Materi</h2>
+            <p>Materi-materi yang ada dipersiapkan dengan baik melalui riset-riset dari sumber yang terpercaya dan terjamin secara mutu dan kualitasnya.</p>
+          </div>
+        </div>
+        <div class="three">
+          <div class="feature-img">
+            <img src="img/platform.jpg" alt="Platform">
+          </div>
+          <div class="feature-description">
+            <h2>Platform</h2>
+            <p>Memberikan saran terhadap beberapa platform atau exchange yang terpercaya dan terjamin untuk melakukan investasi.</p>
+          </div>
+        </div>
+        <div class="four">
+          <div class="feature-img">
+            <img src="img/community.jpg" alt="Community">
+          </div>
+          <div class="feature-description">
+            <h2>Komunitas</h2>
+            <p>Menyediakan ruang untuk berkomunikasi dengan siapa saja dan kapan saja serta bangunlah komunitas yang bernuansa positif dan membangun.</p>
+          </div>
+        </div>
+      </div>
+    </article> 
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#642c1d" fill-opacity="0.5" d="M0,32L80,69.3C160,107,320,181,480,192C640,203,800,149,960,112C1120,75,1280,53,1360,42.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#642c1d" fill-opacity="0.5" d="M0,32L80,69.3C160,107,320,181,480,192C640,203,800,149,960,112C1120,75,1280,53,1360,42.7L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+    
+    <!-- Bagian Tentang Kami -->
+    <article id="about" class="about">
+      <h1>Tentang<span> Kami</span></h1>
+      <div class="about-content">
+        <div class="about-img">
+          <img src="img/invest-about.jpg" alt="About Image">
+        </div>
+        <div class="about-description">
+          <h2>Kenapa kalian harus belajar investasi di tempat kami?</h2>
+          <p>Kami merupakan perusahaan nomor 1 di Asia Tenggara yang bergerak di bidang investasi dan financial. Kami memiliki lebih dari 100 orang tim yang merupakan orang-orang terpilih yang sangat ahli di bidangnya dan merupakan lulusan-lulusan terbaik dari universitas internasional yang berakreditasi A. Perusahaan kami telah dikenal secara internasional bahkan telah mencapai lebih dari 10 juta pengguna sampai pada waktu ini.</p>
+        </div>
+      </div>
+    </article>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#642c1d" fill-opacity="0.2" d="M0,192L80,170.7C160,149,320,107,480,117.3C640,128,800,192,960,192C1120,192,1280,128,1360,96L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#642c1d" fill-opacity="0.2" d="M0,192L80,170.7C160,149,320,107,480,117.3C640,128,800,192,960,192C1120,192,1280,128,1360,96L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+
+    <!-- Bagian Kontak atau Hubungi Kami -->
+    <article id="contact" class="contact">
+      <div class="content">
+        <h1>Hubungi Kami</h1>
+      </div>
+      <div class="container">
+        <div class="contact-info">
+          <div class="box">
+            <div class="icon"><i data-feather="map-pin"></i></div>
+            <div class="text">
+              <h3>Alamat</h3>
+              <p>Jalan Asia Afrika, Gelora, Jakarta Pusat, 10270</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon"><i data-feather="mail"></i></div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>Investment@gmail.com</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon"><i data-feather="phone"></i></div>
+            <div class="text">
+              <h3>Telepon</h3>
+              <p>021-3263-7633</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form>
+            <h2>Kirim Pesan</h2>
+            <div class="input-box">
+              <input type="text" name="" required placeholder="Nama Lengkap">
+            </div>
+            <div class="input-box">
+              <input type="text" name="" required placeholder="Email">
+            </div>
+            <div class="input-box">
+              <textarea required placeholder="Tuliskan Pesanmu . . ."></textarea>
+            </div>
+            <div class="input-box">
+              <input type="submit" name="" value="Kirim">
+            </div>
+          </form>
+        </div>
+      </div>
+    </article>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#642c1d" fill-opacity="1" d="M0,96L80,80C160,64,320,32,480,64C640,96,800,192,960,240C1120,288,1280,288,1360,288L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#642c1d" fill-opacity="1" d="M0,96L80,80C160,64,320,32,480,64C640,96,800,192,960,240C1120,288,1280,288,1360,288L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+
+    <!-- Bagian Biodata Pengembang -->
+    <aside class="profile" id="profile">
+      <h1>Biodata<span> Pengembang</span></h1>
+      <div class="profile-content">
+        <div class="profile-img">
+          <img src="img/profile.png" alt="Profile Picture">
+        </div>
+        <div class="profile-description">
+          <h2>Full Stack Web Developer</h2>
+          <table>
+            <tr>
+              <th>Nama</th>
+            </tr>
+            <tr>
+              <td>Anggoro Rizki Aprillianto</td>
+            </tr>
+            <tr>
+              <th>Alamat</th>
+            </tr>
+            <tr>
+              <td>Jl.Haji Dehir, Bekasi</td>
+            </tr>
+            <tr>
+              <th>Email</th>
+            </tr>
+            <tr>
+              <td>rizkianggoro35@gmail.com</td>
+            </tr>
+            <tr>
+              <th>Telepon</th>
+            </tr>
+            <tr>
+              <td>082213992650</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </aside>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="brown" fill-opacity="0.1" d="M0,128L480,256L960,96L1440,160L1440,320L960,320L480,320L0,320Z"></path></svg>
+
+    <!-- Bagian Footer -->
+    <footer>
+      <div class="socials">
+        <a href="#" class="instagram"><i data-feather="instagram"></i></a>
+        <a href="#" class="twitter"><i data-feather="twitter"></i></a>
+        <a href="#" class="facebook"><i data-feather="facebook"></i></a>
+      </div>
+      <div class="links">
+        <a href="#home">Beranda</a>
+        <a href="#feature">Fitur</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#contact">Kontak</a>
+      </div>
+      <div class="credit">
+        <p>Dibuat oleh Anggoro Rizki Aprillianto | &copy; 2023, Investment</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace()
+    </script>
+</body>
+</html>
